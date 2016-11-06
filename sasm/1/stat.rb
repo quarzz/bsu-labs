@@ -20,6 +20,8 @@ module Stat
       end
     end
 
+    p frequencies[9]
+
     sum = 0
     k.times do |i|
       tmp = ((frequencies[i]  - n / k) ** 2).to_f / (n / k)

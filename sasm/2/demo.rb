@@ -8,7 +8,7 @@ sample = Array.new(100) { distr.next }
 
 chi_squared = chi_squared(sample)
 
-# p chi_squared
+p chi_squared
 
 # n = 100; k = 7; chi_squared(6} = 3.0399999999999996
 # table:

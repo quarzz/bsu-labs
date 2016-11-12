@@ -39,3 +39,19 @@ def chi_squared(sample)
   puts "n = #{elements_count}; k = #{segments_count}; chi_squared(#{segments_count - 1}} = #{sum}"
   sum
 end
+
+def chi_squared2(sample, p)
+  ni = Array.new(2) { |i| sample.count(i) }
+  n = sample.size
+  p = [1 - p, p]
+
+  chi_squared = 0
+
+  p ni
+
+  ni.each_with_index do |nk, index|
+    chi_squared += ((nk - n * p[index]) ** 2) / (n * p[index])
+  end
+
+  chi_squared
+end
